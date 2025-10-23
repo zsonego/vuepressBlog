@@ -1,0 +1,6 @@
+# VuePress 默认临时文件目录
+.vuepress/.temp
+.vuepress/.cache
+.vuepress/dist
+.DS_Store
+node_modules
