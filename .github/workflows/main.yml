@@ -27,7 +27,7 @@ jobs:
       - name: Deploy to server
         uses: easingthemes/ssh-deploy@v2.2.11
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           REMOTE_HOST: ${{secrets.REMOTE_HOST}}
           REMOTE_USER: root
           TARGET: /usr/share/nginx/html/
