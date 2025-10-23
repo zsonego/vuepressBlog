@@ -31,4 +31,4 @@ jobs:
           REMOTE_HOST: ${{secrets.REMOTE_HOST}}
           REMOTE_USER: root
           TARGET: /usr/share/nginx/html/
-          SOURCE: dist
+          SOURCE: /docs/.vuepress/dist/
