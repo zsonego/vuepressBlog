@@ -59,9 +59,9 @@ tag:
       - name: Clear target directory
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: ${{ secrets.REMOTE_HOST }}
+          host: ${ { secrets.REMOTE_HOST } } # 用的时候花括号中间的空格去掉
           username: root
-          key: ${{ secrets.PRIVATE_KEY }}
+          key: ${ { secrets.PRIVATE_KEY } } # 用的时候花括号中间的空格去掉
           script: |
             rm -rf /usr/share/nginx/html/*
             rm -rf /usr/share/nginx/html/.*
@@ -69,8 +69,8 @@ tag:
       - name: Deploy to server
         uses: easingthemes/ssh-deploy@v2.2.11
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-          REMOTE_HOST: ${{secrets.REMOTE_HOST}}
+          SSH_PRIVATE_KEY: ${ { secrets.PRIVATE_KEY } } # 用的时候花括号中间的空格去掉
+          REMOTE_HOST: ${ {secrets.REMOTE_HOST} } # 用的时候花括号中间的空格去掉
           REMOTE_USER: root
           TARGET: /usr/share/nginx/html/
           SOURCE: docs/.vuepress/dist/
